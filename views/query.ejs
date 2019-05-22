@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h>Node js</h>
+</head>
+
+<body>
+    <h2>hello santhana krishna</h2>
+    <ul>
+        <strong>query string: </strong>
+        <p><strong>dept: </strong>
+            <%= qs.dept %>
+        </p>
+        <p><strong>Name: </strong>
+            <%= qs.name %>
+        </p>
+    </ul>
+    <from id="contact-form" method="POST" action="/learnqs">
+        <label for="name">Name</label>
+        <input type="text" name="name" value="<%= qs.name %>">
+        <label for="dept">Department</label>
+        <input type="text" name="dept" value="<%= qs.dept %>">
+        <label for="email">Email</label>
+        <input type="email" name="email" />
+        <input type="submit" value="submit" />
+    </from>
+
+
+
+
+</body>
+
+</html>
