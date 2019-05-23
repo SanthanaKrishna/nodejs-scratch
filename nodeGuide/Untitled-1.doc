@@ -62,3 +62,42 @@ worker Pool: worker pool is responsible for all heavy lifting (eg: large file tr
 
              event loop get terminate after ref==0
 
+
+
+MongoDB:
+MongoDB stores data in flexible, JSON-like documents
+MongoDB is collection of documents
+The document model maps to the object in your application code, making data easy to work with  
+
+MongoDB is a distributed Database at its core, so high availability , horizontal scaling and geographic distribution are built in and easy to use
+MongoDB store data => in one document
+MongoDB is a tool that create a multiple multiple database
+MongoDB-> database #1
+          database #1
+
+NO SCHEMA:
+ 
+id:1, "name":"santhana", "course":"mongoDB"
+id:123, "name":"krishna", "course":"mongoDB",
+id:124534, "name":"santhana",  "age":20
+
+when data receives Database its put data into seprate instance
+Mocha: is used for testing purpose
+
+MongoDB umbrella:
+ Query API, Serverless function, DB Trigger, Real Time Sync.
+ https://www.mongodb.com/cloud/stitch
+
+ MongoDB :
+ CRUD 
+ Create,Read,Update,Delete/Remove Operation
+
+
+ start mododb 
+ "C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"
+
+ show dbs   => to show db
+ use students => use is to switch db into students
+db.studentData.insertOne()
+db.studentData.find().pretty();
+ BSON 

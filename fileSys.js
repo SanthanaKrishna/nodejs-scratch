@@ -1,6 +1,29 @@
 const fs = require('fs');
 const http = require('http');
 
+
+//create a file named mynewfile1.txt:
+// fs.appendFile('mynewfile1.txt', 'Hello content!', function (err) {
+//     if (err) throw err;
+//     console.log('Saved!');
+//   });
+
+//create an empty file 
+// fs.open('mynewfile2.txt', 'w', function (err, file) {
+//     if (err) throw err;
+//     console.log('Saved!', file);
+//   });
+// update a file 
+//append content at the end of the file:
+fs.appendFile('mynewfile1.txt', ' This is my text.', function (err) {
+    if (err) throw err;
+    console.log('Updated!');
+});
+//rename file
+fs.rename('mynewfile1.txt', 'myrenamedfile.txt', function (err) {
+    if (err) throw err;
+    console.log('File Renamed!');
+  });
 /**
  * create floder, create file and add text 
  */
@@ -70,10 +93,10 @@ fs.writeFile('./readMe.txt', 'Welcome to learn node', (err) => {
 var server = http.createServer((req, res) => {
     console.log('requested url' + req.url);
     res.writeHead(200, { 'Content-Type': 'application/json' }); //'Content-Type': 'text/plain'
-    var myObj={
-        name:'sk',
-        age:22,
-        job:'Full stack Developer'
+    var myObj = {
+        name: 'sk',
+        age: 22,
+        job: 'Full stack Developer'
     };
     res.end(JSON.stringify(myObj));
 })
